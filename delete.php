@@ -3,7 +3,7 @@ include 'db.php';
 
 $id = $_GET['id'];
 
-$sql = "DELETE FROM notas WHERE id=$id";
+$sql = "DELETE FROM notas WHERE id_notas=$id";
 
 if ($conn->query($sql) === TRUE) {
     echo "Registro excluído com sucesso";
