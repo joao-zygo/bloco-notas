@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-$id = $_GET['id_notas'];
+$id = $_GET['id'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -37,7 +37,7 @@ $row = $result -> fetch_assoc();
 <body>
     <form method="POST" action=" update.php?id=<?php echo $row['id_notas'];?>">
         <label for="categoria">Categoria</label>
-        <input type="text" name="Categoria" value="<?php echo $row['Categoria']; ?>" required>
+        <input type="text" name="Categoria" value="<?php echo $row['categoria']; ?>" required>
         <label for="conteudo">Conteudo</label>
         <input type="text" name="conteudo" value="<?php echo $row['conteudo']; ?>" required>
         <label for="titulo">Título</label>
