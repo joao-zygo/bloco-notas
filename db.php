@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "root";
-$dbname = "aulas";
+$dbname = "bloco_notas";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
