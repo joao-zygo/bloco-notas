@@ -25,4 +25,4 @@ $conn->close();
     <input type="submit" value="Adicionar">
 </form>
 
-<a href="read.php">Ver registros.</a>
+<a href="read.php">Ver notas.</a>
