@@ -37,7 +37,7 @@ $row = $result -> fetch_assoc();
 <body>
     <form method="POST" action=" update.php?id=<?php echo $row['id_notas'];?>">
         <label for="categoria">Categoria</label>
-        <input type="text" name="Categoria" value="<?php echo $row['categoria']; ?>" required>
+        <input type="text" name="categoria" value="<?php echo $row['categoria']; ?>" required>
         <label for="conteudo">Conteudo</label>
         <input type="text" name="conteudo" value="<?php echo $row['conteudo']; ?>" required>
         <label for="titulo">Título</label>
