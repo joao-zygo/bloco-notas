@@ -8,7 +8,7 @@
 <body>
     <div class="botao">
         <form>
-            <a href='create.php'><button>+</button>Adcionar uma Nova Nota</a>
+            <a href='create.php'>Adcionar uma Nova Nota</a>
         </form>
     </div>
 </body>
@@ -22,24 +22,28 @@
     $result = $conn -> query($sql);
 
     if ($result -> num_rows > 0){
-        echo "<table border='1'>
-        <tr>
-            <th> ID </th>
-            <th> TITULO </th>
-            <th> CONTEUDO </th>
-            <th> CATEGORIA </th>
-        
-        </tr>";
         while($row = $result -> fetch_assoc()){
+            echo "<table border='1'>
+                <tr>
+                    
+                    <th> TITULO </th>
+                    <th> CATEGORIA </th>
+                </tr>";
+
             echo "<tr>
-                <td> {$row['id_notas']} </td>
-                <td> {$row['titulo']} </td>
-                <td> {$row['conteudo']} </td>
-                <td> {$row['categoria']} </td>
-                <td>
-                <a href='update.php?id={$row['id_notas']}'>Editar</a> |
-                <a href='delete.php?id={$row['id_notas']}'>Excluir</a>
-                </td>
+                    
+                    <td> {$row['titulo']} </td>
+                    <td> {$row['categoria']} </td>
+                    <td>
+                        <a href='update.php?id={$row['id_notas']}'>Editar</a> |
+                        <a href='delete.php?id={$row['id_notas']}'>Excluir</a>
+                    </td>
+                </tr>
+                <tr>    
+                    <th> CONTEUDO </th>
+                </tr>
+                <tr>
+                    <td> {$row['conteudo']} </td>
                 </tr>";
         }
         echo "</table>";
@@ -48,4 +52,30 @@
     }
     
 ?>
+<style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .botao {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+    </style>
 
