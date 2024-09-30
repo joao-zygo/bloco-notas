@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-$id = $_GET['id'];
+$id = $_GET['id_notas'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $conteudo = $_POST['conteudo'];
     $titulo = $_POST['titulo'];
 
-    $sql = "UPDATE notas SET categoria='$categoria', conteudo='$conteudo',titulo='$titulo' WHERE id=$id";
+    $sql = "UPDATE notas SET categoria='$categoria', conteudo='$conteudo',titulo='$titulo' WHERE id_notas=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Registro atualizado com sucesso";
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     exit();
 }
 
-$sql = "SELECT * FROM notas WHERE id=$id";
+$sql = "SELECT * FROM notas WHERE id_notas=$id";
 $result = $conn -> query($sql);
 $row = $result -> fetch_assoc();
 ?>
@@ -35,7 +35,7 @@ $row = $result -> fetch_assoc();
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action=" update.php?id=<?php echo $row['id'];?>">
+    <form method="POST" action=" update.php?id=<?php echo $row['id_notas'];?>">
         <label for="categoria">Categoria</label>
         <input type="text" name="Categoria" value="<?php echo $row['Categoria']; ?>" required>
         <label for="conteudo">Conteudo</label>
