@@ -28,16 +28,17 @@
                     
                     <th> TITULO </th>
                     <th> CATEGORIA </th>
+                    <th>
+                        <a href='update.php?id={$row['id_notas']}'>Editar</a> |
+                        <a href='delete.php?id={$row['id_notas']}'>Excluir</a>
+                    </th>
                 </tr>";
 
             echo "<tr>
                     
                     <td> {$row['titulo']} </td>
                     <td> {$row['categoria']} </td>
-                    <td>
-                        <a href='update.php?id={$row['id_notas']}'>Editar</a> |
-                        <a href='delete.php?id={$row['id_notas']}'>Excluir</a>
-                    </td>
+                    
                 </tr>
                 <tr>    
                     <th> CONTEUDO </th>
@@ -63,6 +64,8 @@
             text-align: left;
             padding: 8px;
             border: 1px solid #ddd;
+            
+            
         }
 
         th {
@@ -70,7 +73,7 @@
         }
 
         tr:nth-child(even) {
-            background-color: #f2f2f2;
+            background-color: white;
         }
 
         .botao {
@@ -79,11 +82,14 @@
         }
         
         th:first-child {
-            width: 50%; 
+            width: 80%; 
         }
 
         th:nth-child(2) {
-            width: 80%; 
+            width: 10%; 
+        }
+        th:nth-child(3) {
+            width: 10%; 
         }
     </style>
 
