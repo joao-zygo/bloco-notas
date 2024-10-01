@@ -38,7 +38,10 @@
                     
                     <td> {$row['titulo']} </td>
                     <td> {$row['categoria']} </td>
-                    
+                    <td>
+                        <a href='update.php?id={$row['id_notas']}'>Editar</a> |
+                        <a href='delete.php?id={$row['id_notas']}' onclick='return confirm(\"Tem certeza que deseja excluir esta nota?\");'>Excluir</a>
+                    </td>
                 </tr>
                 <tr>    
                     <th> CONTEUDO </th>
