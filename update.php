@@ -51,7 +51,7 @@ body {
 }
 
 form {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -64,7 +64,7 @@ label {
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
