@@ -77,5 +77,13 @@
             text-align: right;
             margin-bottom: 10px;
         }
+        
+        th:first-child {
+            width: 50%; 
+        }
+
+        th:nth-child(2) {
+            width: 80%; 
+        }
     </style>
 
