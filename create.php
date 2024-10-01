@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "INSERT INTO notas (categoria, conteudo,titulo) VALUES ('$categoria', '$conteudo', '$titulo')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Novo registro criado com sucesso";
+        echo '<div style="text-align: center;">Novo registro criado com sucesso</div>';
     } else {
         echo "Erro: " . $sql . "<br>" . $conn->error;
     }
